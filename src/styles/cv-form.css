@@ -1,0 +1,212 @@
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  justify-content: center;
+}
+
+.cvForm {
+    grid-area: cvForm;
+    justify-self: center;
+  }
+
+header,
+.personalDataMain,
+.workExperienceMain,
+.skillsMain,
+.educationMain {
+  background: #222222;
+  border-radius: 30px;
+  padding: 26px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 9px 0px #d8a2fa47;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.header h1 {
+  font-size: 1.87rem;
+}
+
+.header .headerBtnSection {
+  display: flex;
+  gap: 8px;
+}
+
+.header button,
+.header .createdBy,
+.header a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header button {
+  padding: 8px 11px 8px 11px;
+  gap: 10px;
+  background-color: #d8a2fa;
+  color: rgb(0, 0, 0);
+}
+
+.createdBy {
+  gap: 8px;
+  display: flex;
+  margin-top: 25px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.createdBy a {
+  background-color: #2E2E2E;
+  color: white;
+  gap: -3px;
+  display: inline-flex;
+  padding: 12px 15px;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+
+.createdBy a:hover {
+  box-shadow: 0px 0px 9px 0px #d8a2fa47;
+}
+
+.header img,
+.createdBy img {
+  width: 20px;
+  margin-right: 2px;
+}
+
+/* personal data */
+
+.personalDataTitle {
+  display: flex;
+  gap: 7px;
+}
+
+.personalIcon {
+  width: 30px;
+}
+
+.cvForm input,
+.cvForm label,
+.cvForm textarea {
+  height: 40px;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  background-color: #292929;
+}
+
+.formNameSection {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.formNameSection input {
+  background-color: #292929;
+  border: none;
+  border-radius: 13px;
+  color: #fff;
+  transition: 0.3s;
+  padding: 15px;
+}
+
+.cvForm textarea {
+    height: 150px;
+}
+
+
+.cvForm input[type=file], .cvForm textarea[type=file] {
+    display: none;
+}
+
+.cvForm textarea[type=file] {
+    text-align: start;
+}
+
+.cvForm input, .cvForm textarea,
+.cvForm .newBtn,
+.cvForm label {
+  background-color: rgb(41, 41, 41);
+  color: white;
+  border: none;
+  border-radius: 13px;
+  transition: 0.3s;
+}
+.cvForm input, .cvForm textarea,
+.cvForm label {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+}
+.cvForm input:hover, .cvForm textarea:hover, .cvForm input:focus, .cvForm textarea:focus,
+.cvForm label:hover,
+.cvForm label:focus {
+  background-color: rgb(46, 46, 46);
+
+}
+.cvForm label {
+  cursor: pointer;
+}
+
+.cvForm textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* work experience */
+
+.workExperienceTitle {
+  display: flex;
+  gap: 7px;
+}
+
+.workIcon {
+  width: 30px;
+}
+
+/* skills */
+
+.skills {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.skillsTitle {
+  display: flex;
+  gap: 7px;
+}
+
+.skillsIcon {
+  width: 40px;
+}
+
+.deleteSkillIcon {
+  width: 20px;
+}
+/* education */
+
+.educationTitle {
+  display: flex;
+  gap: 7px;
+}
+
+.educationIcon {
+  width: 40px;
+}
+
