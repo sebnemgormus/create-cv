@@ -1,9 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import personalInfo from "../../assets/personalInfo.svg"; 
 
 
 
-function PersonalData() {
+function PersonalData({
+  onFirstName,
+  onLastName,
+  onTitle,
+  onDescription,
+}) {
+
+  console.log(onFirstName,"fn from form")
   return (
     <div className="personalDataMain">
       <div>
@@ -13,13 +21,13 @@ function PersonalData() {
         </div>
         <form>
           <div className="formNameSection">
-            <input
+          <input
               type="text"
              // value=""
-              placeholder="First Name"
+              placeholder="Last Name"
               maxLength="15"
               autoComplete="off"
-              //onChange={outputInputValue}
+              onChange={onFirstName}
             />
             <input
               type="text"
@@ -27,7 +35,7 @@ function PersonalData() {
               placeholder="Last Name"
               maxLength="15"
               autoComplete="off"
-              //onChange={outputInputValue}
+              onChange={onLastName}
             />
           </div>
           <input
@@ -36,7 +44,7 @@ function PersonalData() {
             placeholder="Title"
             maxLength="15"
             autoComplete="off"
-            //onChange={outputInputValue}
+            onChange={onTitle}
           />
           <label htmlFor="file">Chose Picture</label>
           <input 
@@ -49,7 +57,7 @@ function PersonalData() {
             placeholder="Tell something about yourself"
             maxLength="520"
             autoComplete="off"
-           // onChange={outputInputValue}
+           onChange={onDescription}
           />
         </form>
       </div>
