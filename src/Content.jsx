@@ -15,6 +15,8 @@ function Content() {
   const [lastName, setLastName] = useState('')
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
+  const [number, setNumber] = useState('')
+  const [email, setEmail] = useState('')
 
 
   function onFirstName(event){
@@ -33,6 +35,15 @@ function Content() {
     setDescription(event.target.value)
   }
 
+  function onNumber(event) {
+    setNumber(event.target.value)
+  }
+
+  function onEmail(event) {
+    setEmail(event.target.value)
+  }
+
+
   return (
     <>
       <div className='cvForm'>
@@ -42,6 +53,8 @@ function Content() {
           onLastName={onLastName}
           onTitle={onTitle}
           onDescription={onDescription}
+          onNumber={onNumber}
+          onEmail={onEmail}
         />
         <WorkExperience />
         <Education />
@@ -54,7 +67,8 @@ function Content() {
           lastName={lastName}
           title={title}
           description={description}
-        
+          number={number}
+          email={email}
         />
       </div>
     </>

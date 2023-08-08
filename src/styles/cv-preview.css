@@ -1,0 +1,36 @@
+.cvPreview {
+    background: #222222;
+    box-shadow: 0px 0px 9px 0px #d8a2fa47;
+    color: #fff;
+    font-family: Montserrat,sans-serif;
+    font-size: 14px;
+    grid-area: cvPreview;
+    height: 29.63cm;
+    padding: 15px 75px 0 85px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30px;
+    width: 21cm;
+    border-radius: 30px;
+}
+
+.personalDataPreviewMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.personalDataPreviewRight {
+    text-align: end;
+}
+
+.picture {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 90px;
+    position: absolute;
+    margin-top: 0rem;
+    right: 67px;
+    width: 90px;
+}

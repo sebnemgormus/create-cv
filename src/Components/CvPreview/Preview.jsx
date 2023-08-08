@@ -10,6 +10,8 @@ function Preview({
     lastName,
     title,
     description,
+    number,
+    email
 }) {
   return (
     <div>
@@ -18,6 +20,8 @@ function Preview({
             lastName={lastName}
             title={title}
             description={description}
+            number={number}
+            email={email}
         />
         <WorkExperiencePreview />
         <EducationPreview />

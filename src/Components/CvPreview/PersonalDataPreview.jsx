@@ -6,29 +6,30 @@ function PersonalDataPreview({
   lastName,
   title,
   description,
+  number,
+  email,
 }) {
-
-  console.log(firstName, "firstname")
-  console.log(lastName, "lastName")
+  console.log(firstName, "firstname");
+  console.log(lastName, "lastName");
   return (
- 
-    <div>
-      <div className="personalDataPreviewHeader">
-
-        <div>
-          <h1>{firstName}</h1>
-          <h1>{lastName}</h1>
+    <>
+      <div className="personalDataPreviewMain">
+        <div className="personalDataPreviewLeft">
+          <h1>{firstName} {lastName}</h1>
+        
           <h2>{title}</h2>
+          <p style={{overflowWrap: "anywhere"}}>{description}</p>
         </div>
-
-        <div className="personalDataPreviewImg">
-          <img src="" />
+        <div className="personalDataPreviewRight">
+          <div className="picture">
+            <img src=""/>
+          </div>
+          <p style={{marginTop: "7rem"}}>{number}</p>
+          <p style={{marginTop: "-1rem"}}>{email}</p>
         </div>
       </div>
-        <p>{description}</p>
-    <hr></hr>
-    </div>
-
+      <hr style={{borderColor: "#D8A2FA"}}></hr>
+    </>
   );
 }
 

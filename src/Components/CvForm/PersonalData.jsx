@@ -9,6 +9,8 @@ function PersonalData({
   onLastName,
   onTitle,
   onDescription,
+  onNumber,
+  onEmail
 }) {
 
   console.log(onFirstName,"fn from form")
@@ -24,8 +26,8 @@ function PersonalData({
           <input
               type="text"
              // value=""
-              placeholder="Last Name"
-              maxLength="15"
+              placeholder="First Name"
+              maxLength="10"
               autoComplete="off"
               onChange={onFirstName}
             />
@@ -33,7 +35,7 @@ function PersonalData({
               type="text"
              // value=""
               placeholder="Last Name"
-              maxLength="15"
+              maxLength="10"
               autoComplete="off"
               onChange={onLastName}
             />
@@ -42,9 +44,25 @@ function PersonalData({
             type="text"
            // value=""
             placeholder="Title"
-            maxLength="15"
+            maxLength="10"
             autoComplete="off"
             onChange={onTitle}
+          />
+           <input
+            type="number"
+           // value=""
+            placeholder="Phone number"
+            maxLength="11"
+            autoComplete="off"
+           onChange={onNumber}
+          />
+            <input
+            type="email"
+           // value=""
+            placeholder="Email"
+            maxLength="25"
+            autoComplete="off"
+            onChange={onEmail}
           />
           <label htmlFor="file">Chose Picture</label>
           <input 
@@ -55,7 +73,7 @@ function PersonalData({
           <textarea
             //value=""
             placeholder="Tell something about yourself"
-            maxLength="520"
+            maxLength="90"
             autoComplete="off"
            onChange={onDescription}
           />
