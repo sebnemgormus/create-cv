@@ -11,7 +11,12 @@ function Preview({
     title,
     description,
     number,
-    email
+    email,
+    position,
+    company,
+    startDate,
+    endDate,
+    workDescription
 }) {
   return (
     <div>
@@ -23,7 +28,13 @@ function Preview({
             number={number}
             email={email}
         />
-        <WorkExperiencePreview />
+        <WorkExperiencePreview 
+            position={position}
+            company={company}
+            startDate={startDate}
+            endDate={endDate}
+            workDescription={workDescription}
+        />
         <EducationPreview />
         <SkillsPreview />
     </div>

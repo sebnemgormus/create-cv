@@ -11,7 +11,7 @@ function Header() {
         <h1>Cv Maker</h1>
         <div className="headerBtnSection">
           <button>
-            <img src={save} alt="" /><span>Save</span>
+            <img src={save} alt="" /><span>Download</span>
           </button>
           <button>
             <img src={autofill} alt="" /><span>Autofill</span>

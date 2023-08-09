@@ -17,6 +17,11 @@ function Content() {
   const [description, setDescription] = useState('')
   const [number, setNumber] = useState('')
   const [email, setEmail] = useState('')
+  const [position, setPosition] = useState('')
+  const [company, setCompany] = useState('')
+  const [startDate, setStartDate] = useState('')
+  const [endDate, setEndDate] = useState('')
+  const [workDescription, setWorkDescription] = useState('')
 
 
   function onFirstName(event){
@@ -43,6 +48,26 @@ function Content() {
     setEmail(event.target.value)
   }
 
+  function onPosition(event) {
+    setPosition(event.target.value)
+  }
+
+  function onCompany(event) {
+    setCompany(event.target.value)
+  }
+
+  function onStartDate(event) {
+    setStartDate(event.target.value)
+  }
+
+  function onEndDate(event) {
+    setEndDate(event.target.value)
+  }
+
+  function onWorkDescription(event) {
+    setWorkDescription(event.target.value)
+  }
+
 
   return (
     <>
@@ -56,7 +81,13 @@ function Content() {
           onNumber={onNumber}
           onEmail={onEmail}
         />
-        <WorkExperience />
+        <WorkExperience 
+          onPosition={onPosition}
+          onCompany={onCompany}
+          onStartDate={onStartDate}
+          onEndDate={onEndDate}
+          onWorkDescription={onWorkDescription}
+        />
         <Education />
         <Skills />
 
@@ -69,6 +100,11 @@ function Content() {
           description={description}
           number={number}
           email={email}
+          position={position}
+          company={company}
+          startDate={startDate}
+          endDate={endDate}
+          workDescription={workDescription}
         />
       </div>
     </>

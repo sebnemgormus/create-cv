@@ -19,6 +19,7 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
+    padding: 15px;
 }
 
 .personalDataPreviewRight {
@@ -33,4 +34,24 @@
     margin-top: 0rem;
     right: 67px;
     width: 90px;
+}
+
+/* work experience */
+
+.workExperienceContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 6rem;
+    padding: 15px;
+}
+
+
+.workExperienceContent h2 {
+    color: #D8A2FA;
+    font-weight: 900;
+}
+
+
+.workExperienceContent h3 {
+    font-style: italic;
 }

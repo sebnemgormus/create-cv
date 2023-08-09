@@ -1,12 +1,18 @@
 import React from "react";
 import workExperience from "../../assets/workExperience.svg";
 
-function WorkExperience() {
+function WorkExperience({
+  onPosition,
+  onCompany,
+  onStartDate,
+  onEndDate,
+  onWorkDescription,
+}) {
   return (
     <div className="workExperienceMain">
       <div className="workExperienceTitle">
         <img className="workIcon" src={workExperience} />
-        <h2>Work Experience</h2>
+        <h1>Work Experience</h1>
       </div>
 
       <form>
@@ -14,17 +20,17 @@ function WorkExperience() {
           type="text"
           // value=""
           placeholder="Position"
-          maxLength="15"
+          maxLength="25"
           autoComplete="off"
-          //onChange={outputInputValue}
+          onChange={onPosition}
         />
         <input
           type="text"
           // value=""
           placeholder="Company"
-          maxLength="15"
+          maxLength="20"
           autoComplete="off"
-          //onChange={outputInputValue}
+          onChange={onCompany}
         />
 
         <input
@@ -33,7 +39,7 @@ function WorkExperience() {
           placeholder="Start Date"
           maxLength="15"
           autoComplete="off"
-          //onChange={outputInputValue}
+          onChange={onStartDate}
         />
         <input
           type="number"
@@ -41,15 +47,15 @@ function WorkExperience() {
           placeholder="End Date"
           maxLength="15"
           autoComplete="off"
-          //onChange={outputInputValue}
+          onChange={onEndDate}
         />
 
         <textarea
           //value=""
           placeholder="Description"
-          maxLength="520"
+          maxLength="120"
           autoComplete="off"
-          // onChange={outputInputValue}
+          onChange={onWorkDescription}
         />
         <button className="addNewWorkBtn">+ Add</button>
       </form>
