@@ -8,27 +8,34 @@ function PersonalDataPreview({
   description,
   number,
   email,
+  selectedImage,
 }) {
-  console.log(firstName, "firstname");
-  console.log(lastName, "lastName");
+
   return (
     <>
       <div className="personalDataPreviewMain">
         <div className="personalDataPreviewLeft">
-          <h1>{firstName} {lastName}</h1>
-        
+          <h1>
+            {firstName} {lastName}
+          </h1>
+
           <h2>{title}</h2>
-          <p style={{overflowWrap: "anywhere"}}>{description}</p>
+          <p style={{ overflowWrap: "anywhere" }}>{description}</p>
         </div>
         <div className="personalDataPreviewRight">
           <div className="picture">
-            <img src=""/>
+            <div className="circle-container">
+            {selectedImage && (
+              <img src={URL.createObjectURL(selectedImage)} alt="Selected" />
+            )}
+            </div>
+           
           </div>
-          <p style={{marginTop: "7rem"}}>{number}</p>
-          <p style={{marginTop: "-1rem"}}>{email}</p>
+          <p style={{ marginTop: "7rem" }}>{number}</p>
+          <p style={{ marginTop: "-1rem" }}>{email}</p>
         </div>
       </div>
-      <hr style={{borderColor: "#D8A2FA"}}></hr>
+      <hr style={{ borderColor: "#D8A2FA" }}></hr>
     </>
   );
 }

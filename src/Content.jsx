@@ -22,6 +22,7 @@ function Content() {
   const [startDate, setStartDate] = useState('')
   const [endDate, setEndDate] = useState('')
   const [workDescription, setWorkDescription] = useState('')
+  const [selectedImage, setSelectedImage] = useState(null);
 
 
   function onFirstName(event){
@@ -68,6 +69,11 @@ function Content() {
     setWorkDescription(event.target.value)
   }
 
+  function handleImageSelect(selectedImage) {
+    setSelectedImage(selectedImage);
+    console.log(selectedImage, "selected img")
+  }
+  
 
   return (
     <>
@@ -80,6 +86,7 @@ function Content() {
           onDescription={onDescription}
           onNumber={onNumber}
           onEmail={onEmail}
+          onImageSelect={handleImageSelect}
         />
         <WorkExperience 
           onPosition={onPosition}
@@ -105,6 +112,7 @@ function Content() {
           startDate={startDate}
           endDate={endDate}
           workDescription={workDescription}
+          selectedImage={selectedImage}
         />
       </div>
     </>

@@ -10,8 +10,15 @@ function PersonalData({
   onTitle,
   onDescription,
   onNumber,
-  onEmail
+  onEmail,
+  onImageSelect 
 }) {
+
+  const handleImageSelect = (event) => {
+    const selectedFile = event.target.files[0];
+    onImageSelect(selectedFile);
+  };
+  
 
   console.log(onFirstName,"fn from form")
   return (
@@ -68,7 +75,7 @@ function PersonalData({
           <input 
             id="file"
             type="file"
-            //onChange={uploadPicture}
+            onChange={handleImageSelect}
            />
           <textarea
             //value=""

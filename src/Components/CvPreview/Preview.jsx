@@ -16,7 +16,8 @@ function Preview({
     company,
     startDate,
     endDate,
-    workDescription
+    workDescription,
+    selectedImage
 }) {
   return (
     <div>
@@ -27,6 +28,7 @@ function Preview({
             description={description}
             number={number}
             email={email}
+            selectedImage={selectedImage}
         />
         <WorkExperiencePreview 
             position={position}
