@@ -34,9 +34,9 @@ function WorkExperience({
                 defaultValue={i.desc}
               />
               <div className="experience-btn-container">
-                {/* <button type="submit" className="btn btn-save">
-                    Save
-                  </button> */}
+                <button type="submit" className="btn btn-save">
+                    Update
+                  </button>
                 <button
                   type="button"
                   className="btn btn-delete"
