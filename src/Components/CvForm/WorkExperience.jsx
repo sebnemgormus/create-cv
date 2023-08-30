@@ -24,8 +24,8 @@ function WorkExperience({
               />
               <input placeholder="Company" required defaultValue={i.company} />
 
-              <input placeholder="Start Date" required defaultValue={i.start} />
-              <input placeholder="End Date" required defaultValue={i.end} />
+              <input placeholder="Start Date" type="date" required defaultValue={i.start} />
+              <input placeholder="End Date" type="text" required defaultValue={i.end} />
 
               <textarea
                 placeholder="Description"
@@ -35,8 +35,8 @@ function WorkExperience({
               />
               <div className="experience-btn-container">
                 <button type="submit" className="btn btn-save">
-                    Update
-                  </button>
+                  Update
+                </button>
                 <button
                   type="button"
                   className="btn btn-delete"
@@ -52,8 +52,8 @@ function WorkExperience({
       <form onSubmit={onSubmit}>
         <input placeholder="Position" required></input>
         <input placeholder="Company" required></input>
-        <input placeholder="Start Date" required></input>
-        <input placeholder="End Date" required></input>
+        <input placeholder="Start Date" type="date" required></input>
+        <input placeholder="End Date" type="text" required></input>
         <textarea
           placeholder="Description"
           className="description"

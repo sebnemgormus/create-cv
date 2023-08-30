@@ -28,6 +28,7 @@ function Preview({
             selectedImage={selectedImage}
         />
       {experience.map((exp) => {
+        
         return (
           <WorkExperiencePreview
             key={exp.id}

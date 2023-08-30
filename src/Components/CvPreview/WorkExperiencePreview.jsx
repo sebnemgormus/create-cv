@@ -8,7 +8,6 @@ function WorkExperiencePreview({
 }) {
   return (
     <div>
-      <h1 style={{fontWeight:900}}>WORK EXPERIENCE</h1>
       <div className="workExperienceContent" key={id}>
         <div key={id}>
           <p style={{ color: "#D8A2FA" }}>{start} - {end}</p>

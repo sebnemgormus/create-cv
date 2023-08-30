@@ -76,6 +76,7 @@ function PersonalData({
           />
         </form>
       </div>
+      
     </div>
   );
 }

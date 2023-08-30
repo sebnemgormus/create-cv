@@ -34,6 +34,7 @@ function PersonalDataPreview({
         </div>
       </div>
       <hr style={{ borderColor: "#D8A2FA" }}></hr>
+      <h2 style={{fontWeight:900, marginLeft:"21px"}}>WORK EXPERIENCE</h2>
     </>
   );
 }
