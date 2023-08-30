@@ -1,4 +1,3 @@
-import React from "react";
 import education from "../../assets/education.svg";
 
 function Education() {

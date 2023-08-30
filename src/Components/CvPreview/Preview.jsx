@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
 import PersonalDataPreview from '../CvPreview/PersonalDataPreview'
 import WorkExperiencePreview from '../CvPreview/WorkExperiencePreview'
 import EducationPreview from '../CvPreview/EducationPreview'
@@ -12,11 +11,9 @@ function Preview({
     description,
     number,
     email,
-    position,
-    company,
-    startDate,
-    endDate,
-    workDescription,
+    experience,
+    deleteExperience,
+    editExperience,
     selectedImage
 }) {
   return (
@@ -30,13 +27,21 @@ function Preview({
             email={email}
             selectedImage={selectedImage}
         />
-        <WorkExperiencePreview 
-            position={position}
-            company={company}
-            startDate={startDate}
-            endDate={endDate}
-            workDescription={workDescription}
-        />
+      {experience.map((exp) => {
+        return (
+          <WorkExperiencePreview
+            key={exp.id}
+            deleteExperience={deleteExperience}
+            editExperience={editExperience}
+            id={exp.id}
+            position={exp.position}
+            company={exp.company}
+            start={exp.start}
+            end={exp.end}
+            desc={exp.desc}
+          />
+        );
+      })}
         <EducationPreview />
         <SkillsPreview />
     </div>

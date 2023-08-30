@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-import React from "react";
 
 function PersonalDataPreview({
   firstName,
@@ -19,7 +17,7 @@ function PersonalDataPreview({
             {firstName} {lastName}
           </h1>
 
-          <h2>{title}</h2>
+          <h2 className="person-name">{title}</h2>
           <p style={{ overflowWrap: "anywhere" }}>{description}</p>
         </div>
         <div className="personalDataPreviewRight">

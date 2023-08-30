@@ -1,63 +1,67 @@
-import React from "react";
-import workExperience from "../../assets/workExperience.svg";
+/* eslint-disable no-unused-vars */
+import workExperienceImg from "../../assets/workExperience.svg";
 
 function WorkExperience({
-  onPosition,
-  onCompany,
-  onStartDate,
-  onEndDate,
-  onWorkDescription,
+  onSubmit,
+  workExperience,
+  saveExperience,
+  deleteExperience,
 }) {
   return (
     <div className="workExperienceMain">
       <div className="workExperienceTitle">
-        <img className="workIcon" src={workExperience} />
+        <img className="workIcon" src={workExperienceImg} />
         <h1>Work Experience</h1>
       </div>
+      {workExperience.map((i) => {
+        return (
+          <div key={i.id}>
+            <form onSubmit={(e) => saveExperience(e, i.id)}>
+              <input
+                placeholder="Position"
+                required
+                defaultValue={i.position}
+              />
+              <input placeholder="Company" required defaultValue={i.company} />
 
-      <form>
-        <input
-          type="text"
-          // value=""
-          placeholder="Position"
-          maxLength="25"
-          autoComplete="off"
-          onChange={onPosition}
-        />
-        <input
-          type="text"
-          // value=""
-          placeholder="Company"
-          maxLength="20"
-          autoComplete="off"
-          onChange={onCompany}
-        />
+              <input placeholder="Start Date" required defaultValue={i.start} />
+              <input placeholder="End Date" required defaultValue={i.end} />
 
-        <input
-          type="number"
-          // value=""
-          placeholder="Start Date"
-          maxLength="15"
-          autoComplete="off"
-          onChange={onStartDate}
-        />
-        <input
-          type="number"
-          // value=""
-          placeholder="End Date"
-          maxLength="15"
-          autoComplete="off"
-          onChange={onEndDate}
-        />
-
+              <textarea
+                placeholder="Description"
+                id="description"
+                required
+                defaultValue={i.desc}
+              />
+              <div className="experience-btn-container">
+                {/* <button type="submit" className="btn btn-save">
+                    Save
+                  </button> */}
+                <button
+                  type="button"
+                  className="btn btn-delete"
+                  onClick={(e) => deleteExperience(i.id)}
+                >
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
+        );
+      })}
+      <form onSubmit={onSubmit}>
+        <input placeholder="Position" required></input>
+        <input placeholder="Company" required></input>
+        <input placeholder="Start Date" required></input>
+        <input placeholder="End Date" required></input>
         <textarea
-          //value=""
           placeholder="Description"
-          maxLength="120"
-          autoComplete="off"
-          onChange={onWorkDescription}
-        />
-        <button className="addNewWorkBtn">+ Add</button>
+          className="description"
+          required
+        ></textarea>
+        <button className="addNewWorkBtn" type="submit">
+          + Add
+        </button>
       </form>
     </div>
   );

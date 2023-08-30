@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import personalInfo from "../../assets/personalInfo.svg"; 
-
 
 
 function PersonalData({
@@ -19,8 +17,6 @@ function PersonalData({
     onImageSelect(selectedFile);
   };
   
-
-  console.log(onFirstName,"fn from form")
   return (
     <div className="personalDataMain">
       <div>
@@ -32,7 +28,6 @@ function PersonalData({
           <div className="formNameSection">
           <input
               type="text"
-             // value=""
               placeholder="First Name"
               maxLength="10"
               autoComplete="off"
@@ -40,7 +35,6 @@ function PersonalData({
             />
             <input
               type="text"
-             // value=""
               placeholder="Last Name"
               maxLength="10"
               autoComplete="off"
@@ -49,15 +43,13 @@ function PersonalData({
           </div>
           <input
             type="text"
-           // value=""
             placeholder="Title"
-            maxLength="10"
+            maxLength="20"
             autoComplete="off"
             onChange={onTitle}
           />
            <input
             type="number"
-           // value=""
             placeholder="Phone number"
             maxLength="11"
             autoComplete="off"
@@ -65,7 +57,6 @@ function PersonalData({
           />
             <input
             type="email"
-           // value=""
             placeholder="Email"
             maxLength="25"
             autoComplete="off"
@@ -78,7 +69,6 @@ function PersonalData({
             onChange={handleImageSelect}
            />
           <textarea
-            //value=""
             placeholder="Tell something about yourself"
             maxLength="90"
             autoComplete="off"
