@@ -1,4 +1,3 @@
-import React from "react";
 import skills from "../../assets/skills.svg"; 
 import deleteSkill from "../../assets/deleteSkill.svg";
 

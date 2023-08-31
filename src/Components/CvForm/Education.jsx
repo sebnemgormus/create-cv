@@ -1,6 +1,9 @@
 import education from "../../assets/education.svg";
 
-function Education() {
+function Education({
+  onSchoolName,
+  onSchoolDegree
+}) {
   return (
     <div className="educationMain">
       <div className="educationTitle">
@@ -13,18 +16,18 @@ function Education() {
           type="text"
           // value=""
           placeholder="School"
-          maxLength="15"
+          maxLength="100"
           autoComplete="off"
-          //onChange={outputInputValue}
+          onChange={onSchoolName}
         />
 
         <input
           type="text"
           // value=""
           placeholder="Degree"
-          maxLength="15"
+          maxLength="100"
           autoComplete="off"
-          //onChange={outputInputValue}
+          onChange={onSchoolDegree}
         />
       </form>
     </div>

@@ -9,16 +9,20 @@ function PersonalDataPreview({
   selectedImage,
 }) {
 
+  function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   return (
     <>
       <div className="personalDataPreviewMain">
         <div className="personalDataPreviewLeft">
           <h1>
-            {firstName} {lastName}
+            {firstName ? capitalizeFirstLetter(firstName) : ''} {lastName ? capitalizeFirstLetter(lastName) : ''}
           </h1>
 
-          <h2 className="person-name">{title}</h2>
-          <p style={{ overflowWrap: "anywhere" }}>{description}</p>
+          <h2 className="person-name">{title ? capitalizeFirstLetter(title) : ''}</h2>
+          <p style={{ overflowWrap: "anywhere" }}>{description ? capitalizeFirstLetter(description) : ''}</p>
         </div>
         <div className="personalDataPreviewRight">
           <div className="picture">
@@ -34,7 +38,7 @@ function PersonalDataPreview({
         </div>
       </div>
       <hr style={{ borderColor: "#D8A2FA" }}></hr>
-      <h2 style={{fontWeight:900, marginLeft:"21px"}}>WORK EXPERIENCE</h2>
+      <h2 className="workExperienceTitle">WORK EXPERIENCE</h2>
     </>
   );
 }

@@ -2,7 +2,9 @@
 
 function SkillsPreview() {
   return (
-    <div>SkillsPreview</div>
+    <div>
+        <h2 style={{fontWeight: 900, marginLeft: "21px"}}>SKILLS</h2>
+    </div>
   )
 }
 

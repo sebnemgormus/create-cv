@@ -18,6 +18,9 @@ function Content() {
   const [email, setEmail] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
   const [workExperience, setWorkExperience] = useState([]);
+  const [schoolName, setSchoolName] = useState("") 
+  const [schoolDegree, setSchoolDegree] = useState("") 
+
 
   function onFirstName(event) {
     setFirstName(event.target.value);
@@ -47,6 +50,16 @@ function Content() {
     setSelectedImage(selectedImage);
     console.log(selectedImage, "selected img");
   }
+
+  function onSchoolName(event) {
+    setSchoolName(event.target.value);
+  }
+
+  function onSchoolDegree(event) {
+    setSchoolDegree(event.target.value);
+  }
+
+
 
   function addWorkExperience(e) {
     e.preventDefault();
@@ -115,7 +128,10 @@ function Content() {
           workExperience={workExperience}
           saveExperience={saveExperience}
         />
-        <Education />
+        <Education 
+          onSchoolName={onSchoolName}
+          onSchoolDegree={onSchoolDegree}
+        />
         <Skills />
       </div>
       <div className="cvPreview">
@@ -128,6 +144,8 @@ function Content() {
           email={email}
           selectedImage={selectedImage}
           experience={workExperience}
+          schoolName={schoolName}
+          schoolDegree={schoolDegree}
         />
       </div>
     </>

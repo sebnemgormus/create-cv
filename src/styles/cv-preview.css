@@ -57,6 +57,13 @@
 
 /* work experience */
 
+.workExperienceTitle {
+  font-weight: 900;
+  margin-left: 21px;
+  padding-top: 20px;
+}
+
+
 .workExperienceContent {
   display: flex;
   align-items: center;
@@ -67,4 +74,20 @@
 .workExperienceContent h2 {
   color: #d8a2fa;
   font-weight: 900;
+}
+
+/* education */ 
+
+.educationTitle {
+  font-weight: 900;
+  margin-left: 21px;
+  padding-top: 20px;
+}
+
+.educationPreview {
+  padding: 10px 0px 10px 20px;
+}
+
+.schoolName {
+  color: #d8a2fa;
 }
