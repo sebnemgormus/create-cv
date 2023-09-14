@@ -220,3 +220,17 @@ header,
 .educationIcon {
   width: 40px;
 }
+
+
+/* load-reset-print section */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-container,
+.btn {
+  border-radius: 8px;
+}

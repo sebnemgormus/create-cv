@@ -2,14 +2,17 @@ import { useState } from "react";
 import Header from "./Components/CvForm/Header";
 import PersonalData from "./Components/CvForm/PersonalData";
 import WorkExperience from "./Components/CvForm/WorkExperience";
-import Skills from "./Components/CvForm/Skills";
+//import Skills from "./Components/CvForm/Skills";
 import Education from "./Components/CvForm/Education";
 import "./styles/cv-form.css";
 import "./styles/normalize.css";
 import Preview from "./Components/CvPreview/Preview";
 import { v4 as uuidv4 } from "uuid";
+import ReactToPrint from "react-to-print";
 
 function Content() {
+  let componentRef = null;
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [title, setTitle] = useState("");
@@ -21,6 +24,7 @@ function Content() {
   const [schoolName, setSchoolName] = useState("") 
   const [schoolDegree, setSchoolDegree] = useState("") 
 
+  
 
   function onFirstName(event) {
     setFirstName(event.target.value);
@@ -60,7 +64,6 @@ function Content() {
   }
 
 
-
   function addWorkExperience(e) {
     e.preventDefault();
     console.log(e.target[0].value, "test");
@@ -76,6 +79,11 @@ function Content() {
     clear(e);
   }
 
+  // function addSkill(e) {
+  //   console.log(e.target.value, "skill")
+  // }
+
+
   function clear(e) {
     for (let i = 0; i < e.target.length; i++) {
       e.target[i].value = "";
@@ -88,6 +96,9 @@ function Content() {
       return currentExperience.filter((exp) => exp.id !== id);
     });
   }
+
+  
+
 
   function saveExperience(e, id) {
     e.preventDefault();
@@ -108,6 +119,7 @@ function Content() {
       })
     );
   }
+
 
   return (
     <>
@@ -132,9 +144,29 @@ function Content() {
           onSchoolName={onSchoolName}
           onSchoolDegree={onSchoolDegree}
         />
-        <Skills />
+        {/* <Skills 
+          addSkill={addSkill}
+         // deleteSkill={deleteSkill}
+         // skillInfo={skillInfo}
+        /> */}
+        <section className="btn-container">
+          <button className="btn">
+            Load Example
+          </button>
+          <button className="btn">
+            Reset
+          </button>
+          <ReactToPrint
+            trigger={() => {
+              return <button className="btn">Print CV</button>;
+            }}
+            content={() => componentRef}
+            documentTitle="Cv"
+            pageStyle="print"
+          />
+        </section>
       </div>
-      <div className="cvPreview">
+      <div className="cvPreview" ref={(el) => (componentRef = el)}>
         <Preview
           firstName={firstName}
           lastName={lastName}
@@ -146,6 +178,7 @@ function Content() {
           experience={workExperience}
           schoolName={schoolName}
           schoolDegree={schoolDegree}
+
         />
       </div>
     </>

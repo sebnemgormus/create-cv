@@ -1,8 +1,10 @@
-import skills from "../../assets/skills.svg"; 
+import skills from "../../assets/skills.svg";
 import deleteSkill from "../../assets/deleteSkill.svg";
 
 
-function Skills() {
+function Skills({
+  addSkill
+}) {
   return (
     <div className="skillsMain">
       <div className="skillsTitle">
@@ -18,22 +20,10 @@ function Skills() {
             placeholder="Language/Technology"
             maxLength="15"
             autoComplete="off"
-            //onChange={outputInputValue}
+          onChange={addSkill}
           />
-          
-          <button><img className="deleteSkillIcon" src={deleteSkill}/></button>
-        </div>
 
-        <div className="skills">
-          <input
-            type="text"
-            // value=""
-            placeholder="Language/Technology"
-            maxLength="15"
-            autoComplete="off"
-            //onChange={outputInputValue}
-          />
-          <button><img className="deleteSkillIcon" src={deleteSkill}/></button>
+          <button><img className="deleteSkillIcon" src={deleteSkill} /></button>
         </div>
         <button className="addNewWorkBtn">+ Add</button>
       </form>

@@ -16,7 +16,9 @@ function Preview({
     editExperience,
     selectedImage,
     schoolName,
-    schoolDegree
+    schoolDegree,
+
+ 
 }) {
   return (
     <div>
@@ -49,7 +51,9 @@ function Preview({
             schoolName={schoolName}
             schoolDegree={schoolDegree}
         />
-        <SkillsPreview />
+        <SkillsPreview 
+          
+        />
     </div>
   )
 }
