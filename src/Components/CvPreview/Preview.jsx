@@ -2,7 +2,6 @@
 import PersonalDataPreview from '../CvPreview/PersonalDataPreview'
 import WorkExperiencePreview from '../CvPreview/WorkExperiencePreview'
 import EducationPreview from '../CvPreview/EducationPreview'
-import SkillsPreview from '../CvPreview/SkillsPreview'
 
 function Preview({
     firstName,
@@ -50,9 +49,6 @@ function Preview({
         <EducationPreview 
             schoolName={schoolName}
             schoolDegree={schoolDegree}
-        />
-        <SkillsPreview 
-          
         />
     </div>
   )

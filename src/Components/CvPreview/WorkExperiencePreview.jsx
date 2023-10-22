@@ -14,10 +14,10 @@ function WorkExperiencePreview({
   return (
     <div>
       <div className="workExperienceContent" key={id}>
-        <div key={id}>
+        <div>
           <p style={{ color: "#D8A2FA" }}>{start} to {end}</p>
         </div>
-        <div key={id}>
+        <div>
           <h2>{position ? capitalizeFirstLetter(position) : ''}</h2>
           <h3>{company ? capitalizeFirstLetter(company) : ''}</h3>
           <p>{desc ? capitalizeFirstLetter(desc) : ''}</p>

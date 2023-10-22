@@ -5,7 +5,7 @@ function EducationPreview({
   schoolDegree
 }) {
   return (
-    <div>
+    <div >
       <h2 className="educationTitle">EDUCATION</h2>
       <div className="educationPreview">
         <h2 className="schoolName">{schoolName ? schoolName.toUpperCase() : ''}</h2>

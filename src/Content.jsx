@@ -2,7 +2,6 @@ import { useState } from "react";
 import Header from "./Components/CvForm/Header";
 import PersonalData from "./Components/CvForm/PersonalData";
 import WorkExperience from "./Components/CvForm/WorkExperience";
-//import Skills from "./Components/CvForm/Skills";
 import Education from "./Components/CvForm/Education";
 import "./styles/cv-form.css";
 import "./styles/normalize.css";
@@ -13,16 +12,16 @@ import ReactToPrint from "react-to-print";
 function Content() {
   let componentRef = null;
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [number, setNumber] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState(null);
+  const [lastName, setLastName] = useState(null);
+  const [title, setTitle] = useState(null);
+  const [description, setDescription] = useState(null);
+  const [number, setNumber] = useState(null);
+  const [email, setEmail] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const [workExperience, setWorkExperience] = useState([]);
-  const [schoolName, setSchoolName] = useState("") 
-  const [schoolDegree, setSchoolDegree] = useState("") 
+  const [schoolName, setSchoolName] = useState(null) 
+  const [schoolDegree, setSchoolDegree] = useState(null) 
 
   
 
@@ -79,11 +78,6 @@ function Content() {
     clear(e);
   }
 
-  // function addSkill(e) {
-  //   console.log(e.target.value, "skill")
-  // }
-
-
   function clear(e) {
     for (let i = 0; i < e.target.length; i++) {
       e.target[i].value = "";
@@ -96,9 +90,6 @@ function Content() {
       return currentExperience.filter((exp) => exp.id !== id);
     });
   }
-
-  
-
 
   function saveExperience(e, id) {
     e.preventDefault();
@@ -120,6 +111,19 @@ function Content() {
     );
   }
 
+  function reset() {
+    const emptyContent = [];
+    setFirstName("");
+    setLastName("");
+    setTitle("");
+    setDescription("");
+    setNumber("");
+    setEmail("");
+    setSelectedImage("");
+    setWorkExperience(emptyContent);
+    setSchoolName("");
+    setSchoolDegree("");
+  }
 
   return (
     <>
@@ -144,16 +148,8 @@ function Content() {
           onSchoolName={onSchoolName}
           onSchoolDegree={onSchoolDegree}
         />
-        {/* <Skills 
-          addSkill={addSkill}
-         // deleteSkill={deleteSkill}
-         // skillInfo={skillInfo}
-        /> */}
         <section className="btn-container">
-          <button className="btn">
-            Load Example
-          </button>
-          <button className="btn">
+          <button className="btn" onClick={reset}>
             Reset
           </button>
           <ReactToPrint
