@@ -11,7 +11,7 @@ function WorkExperience({
     <div className="workExperienceMain">
       <div className="workExperienceTitle">
         <img className="workIcon" src={workExperienceImg} />
-        <h1>Work Experience</h1>
+        <h2>Work Experience</h2>
       </div>
       {workExperience.map((i) => {
         return (

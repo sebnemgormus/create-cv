@@ -57,13 +57,6 @@
 
 /* work experience */
 
-.workExperienceTitle {
-  font-weight: 900;
-  margin-left: 21px;
-  padding-top: 20px;
-}
-
-
 .workExperienceContent {
   display: flex;
   align-items: center;
@@ -80,7 +73,6 @@
 
 .educationTitle {
   font-weight: 900;
-  margin-left: 21px;
   padding-top: 20px;
 }
 
