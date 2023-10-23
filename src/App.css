@@ -10,4 +10,29 @@
   gap: 3rem;
 }
 
+@media (max-width: 768px) {
+  #root {
+    grid-template-columns: 1fr; 
+    grid-template-areas: "cvForm" "cvPreview"; 
+  }
+  
+  #root .cvForm, #root .cvPreview {
+    width: 100%; 
+    padding: 0 20px;
+  }
 
+  #root .cvForm {
+    overflow-y: auto; 
+  }
+  
+  #root .cvPreview {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 15px; 
+    margin: 0 20px; 
+    max-width: calc(100% - 40px); 
+    
+  }
+
+}

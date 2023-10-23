@@ -5,7 +5,7 @@
   font-family: Montserrat, sans-serif;
   font-size: 14px;
   grid-area: cvPreview;
-  height: 29.63cm;
+  height: 42%;
   padding: 15px 75px 0 85px;
   position: -webkit-sticky;
   position: sticky;
@@ -83,3 +83,4 @@
 .schoolName {
   color: #d8a2fa;
 }
+
